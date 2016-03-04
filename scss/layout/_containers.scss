@@ -5,13 +5,28 @@ body {
   text-align: center;
   height: 800px;
   background-color: #E6E6E0;
+
+
+  @media #{$brk-medium} {
+    display: flex;
+    flex-direction: column;
+  }
   h3 {
     padding-top: 8vh;
     color: #85857B;
+    max-width: 800px;
+  }
+  h1 {
+    max-width: 800px;
   }
   .head {
     width: 30vw;
     border: 2px solid #85857B;
+    max-width: 250px;
+    @media #{$brk-wide} {
+      display: none;
+    }
+
   }
   a {
     color: #DC7725;
@@ -19,8 +34,11 @@ body {
   p{
     font-size: 22px;
     color: #85857B;
-    margin-top: 20px;
+    margin: 20px;
     font-stretch: expanded;
+    max-width: 800px;
+
+
   }
 
 }

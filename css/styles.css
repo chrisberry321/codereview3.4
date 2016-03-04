@@ -9,6 +9,11 @@ header button {
     header button {
       display: none; } }
 
+@media (max-width: 1080px) {
+  .aw-discription {
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
 .aw-discription button {
   background-color: #DC7725;
   width: 160px;
@@ -72,19 +77,31 @@ body {
   text-align: center;
   height: 800px;
   background-color: #E6E6E0; }
+  @media (max-width: 1080px) {
+    .aw-discription {
+      display: flex;
+      flex-direction: column; } }
   .aw-discription h3 {
     padding-top: 8vh;
-    color: #85857B; }
+    color: #85857B;
+    max-width: 800px; }
+  .aw-discription h1 {
+    max-width: 800px; }
   .aw-discription .head {
     width: 30vw;
-    border: 2px solid #85857B; }
+    border: 2px solid #85857B;
+    max-width: 250px; }
+    @media (min-width: 1240px) {
+      .aw-discription .head {
+        display: none; } }
   .aw-discription a {
     color: #DC7725; }
   .aw-discription p {
     font-size: 22px;
     color: #85857B;
-    margin-top: 20px;
-    font-stretch: expanded; }
+    margin: 20px;
+    font-stretch: expanded;
+    max-width: 800px; }
 
 header {
   background-image: url(../img/main.jpg);
