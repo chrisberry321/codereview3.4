@@ -5,11 +5,14 @@ header button {
   background-color: #DC7725;
   width: 160px;
   height: 40px; }
-  @media (max-width: 1080px) {
+  @media (min-width: 771px) and (max-width: 1080px) {
+    header button {
+      display: none; } }
+  @media (max-width: 770px) {
     header button {
       display: none; } }
 
-@media (max-width: 1080px) {
+@media (min-width: 771px) and (max-width: 1080px) {
   .aw-discription {
     display: flex;
     flex-direction: column;
@@ -34,7 +37,7 @@ header button {
       flex-direction: column;
       display: flex;
       margin: 12px; } }
-  @media (max-width: 1080px) {
+  @media (min-width: 771px) and (max-width: 1080px) {
     .row1, .row2 {
       display: flex;
       flex-wrap: wrap;
@@ -43,7 +46,7 @@ header button {
 .trip1 {
   background-image: url(../img/pic1.jpg);
   flex: 2; }
-  @media (max-width: 1080px) {
+  @media (min-width: 771px) and (max-width: 1080px) {
     .trip1 {
       flex: 1 1 100%; } }
 
@@ -66,7 +69,7 @@ header button {
 .trip6 {
   background-image: url(../img/pic7.jpg);
   flex: 2; }
-  @media (max-width: 1080px) {
+  @media (min-width: 771px) and (max-width: 1080px) {
     .trip6 {
       flex: 1 1 100%; } }
 
@@ -75,9 +78,9 @@ body {
 
 .aw-discription {
   text-align: center;
-  height: 60vh;
+  height: 630px;
   background-color: #E6E6E0; }
-  @media (max-width: 1080px) {
+  @media (min-width: 771px) and (max-width: 1080px) {
     .aw-discription {
       display: flex;
       flex-direction: column; } }
@@ -91,7 +94,7 @@ body {
     width: 30vw;
     border: 2px solid #85857B;
     max-width: 250px; }
-    @media (min-width: 1240px) {
+    @media (min-width: 1081px) and (max-width: 1440px) {
       .aw-discription .head {
         display: none; } }
   .aw-discription a {
@@ -104,33 +107,51 @@ body {
     max-width: 800px; }
 
 .destination {
-  height: 90vh; }
+  height: 1000px; }
   .destination .destination-head {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
+    text-align: center; }
   .destination a {
     color: #DC7725; }
-  .destination img {
-    display: none; }
-    @media (min-width: 1240px) {
-      .destination img {
+  .destination .map {
+    opacity: 0.0; }
+    @media (min-width: 1081px) and (max-width: 1440px), (min-width: 1441px) {
+      .destination .map {
+        opacity: 1;
         display: inline;
         position: absolute;
         left: 34%; } }
 
-.destination {
-  display: flex;
-  flex-direction: column; }
-  .destination .destination-bg {
-    display: none; }
-    @media (min-width: 1240px) {
-      .destination .destination-bg {
-        justify-content: flex-end; } }
-
-.destination-bg-sides {
+.destination .destination-bg {
   display: none; }
+  @media (min-width: 1441px) {
+    .destination .destination-bg {
+      display: inline;
+      position: relative;
+      top: 420px;
+      left: 100px; } }
+
+.destination-bg-right {
+  display: none; }
+  @media (min-width: 1441px) {
+    .destination-bg-right {
+      display: inline;
+      position: relative;
+      top: 214px;
+      left: 81%; } }
+
+.destination .destination-bg-left {
+  display: none; }
+  @media (min-width: 1441px) {
+    .destination .destination-bg-left {
+      display: inline;
+      position: absolute;
+      top: 3320px;
+      right: 74%; } }
+
+footer {
+  height: 500px;
+  background-color: white;
+  margin: 0; }
 
 header {
   background-image: url(../img/main.jpg);
@@ -139,7 +160,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
-  @media (max-width: 1080px) {
+  @media (min-width: 771px) and (max-width: 1080px) {
     header {
       height: 60vh; } }
   @media (max-width: 770px) {
@@ -212,17 +233,21 @@ nav ul li a {
   flex-direction: column;
   align-items: center; }
   .title .alaska {
-    margin-top: 6%; }
-    @media (min-width: 1240px) {
+    margin-top: 25px; }
+    @media (min-width: 771px) and (max-width: 1080px) {
       .title .alaska {
-        margin-top: 170px;
-        height: 150px; } }
+        margin-top: 100px; } }
+    @media (min-width: 1081px) and (max-width: 1440px) {
+      .title .alaska {
+        margin-top: 300px; } }
+    @media (min-width: 1441px) {
+      .title .alaska {
+        margin-top: 280px;
+        height: 150px;
+        width: auto; } }
   .title h1, .title h2 {
     color: white;
     text-align: center; }
-    @media (min-width: 1240px) {
-      .title h1, .title h2 {
-        font-size: 2.9em; } }
 
 .trip1, .trip2, .trip3, .trip4, .trip5, .trip6 {
   background-repeat: no-repeat;

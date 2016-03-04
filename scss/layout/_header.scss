@@ -87,18 +87,21 @@ nav ul li a {
   flex-direction: column;
   align-items: center;
   .alaska {
-    margin-top: 6%;
+    margin-top: 25px;
+    @media #{$brk-medium} {
+      margin-top: 100px;
+      }
     @media #{$brk-wide} {
-      margin-top: 170px;
+      margin-top: 300px;
+    }
+    @media #{$brk-ex-wide} {
+      margin-top: 280px;
       height: 150px;
+      width: auto;
     }
   }
   h1, h2 {
     color: white;
     text-align: center;
-    @media #{$brk-wide} {
-      font-size: 2.9em;
-    }
   }
-
 }

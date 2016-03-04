@@ -5,7 +5,7 @@ body {
 // DESCRIPTION OF ARCTIC WILD//
 .aw-discription {
   text-align: center;
-  height: 60vh;
+  height: 630px;
   background-color: #E6E6E0;
 
 
@@ -28,7 +28,6 @@ body {
     @media #{$brk-wide} {
       display: none;
     }
-
   }
   a {
     color: #DC7725;
@@ -43,51 +42,61 @@ body {
 }
 
 //DESTINATIONS//
+
 .destination {
-  height: 90vh;
+  height: 1000px;
   .destination-head {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
   }
-
   a {
     color: #DC7725;
   }
-  img {
-    display: none;
-    @media #{$brk-wide} {
+  .map {
+    opacity: 0.0;
+    @media #{$brk-wide, $brk-ex-wide} {
+      opacity: 1;
       display: inline;
       position: absolute;
       left: 34%;
       }
+      @media #{$brk-ex-wide} {
+
+        }
     }
 }
 .destination {
-  display: flex;
-  flex-direction: column;
   .destination-bg {
     display: none;
-    @media #{$brk-wide} {
-      justify-content: flex-end;
-
+    @media #{$brk-ex-wide} {
+      display: inline;
+      position: relative;
+      top: 420px;
+      left: 100px;
     }
   }
 }
 
-
-
-
-.destination-bg-sides {
+.destination-bg-right {
   display: none;
+  @media #{$brk-ex-wide} {
+    display: inline;
+    position: relative;
+    top: 214px;
+    left: 81%;
+
+  }
 }
-
-
-
-
-
+.destination {
+  .destination-bg-left {
+    display: none;
+    @media #{$brk-ex-wide} {
+      display: inline;
+      position: absolute;
+      top: 3320px;
+      right: 74%;
+    }
+  }
+}
 
 
 

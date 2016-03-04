@@ -10,12 +10,15 @@ header {
     @media #{$brk-medium} {
       display: none;
     }
+    @media #{$brk-narrow} {
+      display: none;
+    }
 
   }
 }
 
 .aw-discription {
-  
+
   @media #{$brk-medium} {
     display: flex;
     flex-direction: column;
