@@ -1,9 +1,11 @@
 body {
   background-color: #D1D1C9;
 }
+
+// DESCRIPTION OF ARCTIC WILD//
 .aw-discription {
   text-align: center;
-  height: 800px;
+  height: 60vh;
   background-color: #E6E6E0;
 
 
@@ -37,8 +39,61 @@ body {
     margin: 20px;
     font-stretch: expanded;
     max-width: 800px;
+  }
+}
 
+//DESTINATIONS//
+.destination {
+  height: 90vh;
+  .destination-head {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
   }
 
+  a {
+    color: #DC7725;
+  }
+  img {
+    display: none;
+    @media #{$brk-wide} {
+      display: inline;
+      position: absolute;
+      left: 34%;
+      }
+    }
 }
+.destination {
+  display: flex;
+  flex-direction: column;
+  .destination-bg {
+    display: none;
+    @media #{$brk-wide} {
+      justify-content: flex-end;
+
+    }
+  }
+}
+
+
+
+
+.destination-bg-sides {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+p{}

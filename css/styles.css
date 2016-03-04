@@ -75,7 +75,7 @@ body {
 
 .aw-discription {
   text-align: center;
-  height: 800px;
+  height: 60vh;
   background-color: #E6E6E0; }
   @media (max-width: 1080px) {
     .aw-discription {
@@ -102,6 +102,35 @@ body {
     margin: 20px;
     font-stretch: expanded;
     max-width: 800px; }
+
+.destination {
+  height: 90vh; }
+  .destination .destination-head {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .destination a {
+    color: #DC7725; }
+  .destination img {
+    display: none; }
+    @media (min-width: 1240px) {
+      .destination img {
+        display: inline;
+        position: absolute;
+        left: 34%; } }
+
+.destination {
+  display: flex;
+  flex-direction: column; }
+  .destination .destination-bg {
+    display: none; }
+    @media (min-width: 1240px) {
+      .destination .destination-bg {
+        justify-content: flex-end; } }
+
+.destination-bg-sides {
+  display: none; }
 
 header {
   background-image: url(../img/main.jpg);
