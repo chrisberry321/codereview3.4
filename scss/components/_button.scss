@@ -1,0 +1,28 @@
+header {
+  button {
+    position: absolute;
+    top: 70%;
+    left: 46%;
+    background-color: #DC7725;
+    width: 160px;
+    height: 40px;
+
+    @media #{$brk-medium} {
+      display: none;
+    }
+
+  }
+}
+
+.aw-discription {
+  button {
+    background-color: #DC7725;
+    width: 160px;
+    height: 40px;
+
+    @media #{$brk-narrow} {
+      display: none;
+    }
+
+  }
+}

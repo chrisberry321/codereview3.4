@@ -4,6 +4,11 @@
   background-position: center;
   display: flex;
   justify-content: center;
+  @media #{$brk-narrow} {
+    margin-top: 10px;
+    height: 21vh;
+    border-radius: 3px;
+  }
   &:hover {
     a{
       transform: scale(1.4);
@@ -19,10 +24,21 @@
     opacity: 0.7;
     display: flex;
     justify-content: center;
+    @media #{$brk-narrow} {
+      height: 60px;
+      width: 60px;
+      background-color: #444;
+    }
   }
   img {
     align-self: center;
     height: 40px;
     width: 40px;
+    @media #{$brk-narrow} {
+      height: 30px;
+      width: 30px;
+      background-color: #444;
     }
+  }
+
 }

@@ -1,42 +1,46 @@
 header {
   background-image: url(../img/main.jpg);
   max-width: 100%;
-  height: 100vh;
+  height: 90vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-a {
-  list-style: none;
-  text-decoration: none;
-  color: white;
-}
-
-ul {
-  display: flex;
-  justify-content: space-around;
-  margin: 0 auto;
-  padding: 60px 0 0;
-
+  @media #{$brk-medium} {
+    height: 60vh;
+  }
+  @media #{$brk-narrow} {
+    height: 45vh;
+  }
 }
 
 nav {
   width: 80%;
   margin:auto;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 60px 0 0;
+    li {
+    flex: 1;
+    padding: 5px 0;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    @media #{$brk-narrow} {
+      display: none;
+      }
+    }
+    li:nth-child(1) {
+      display: flex;
+      flex: 3;
+    }
+  }
 }
-li {
-flex: 1;
-padding: 5px 0;
-// border: 1px solid yellow;
-font-size: 18px;
-text-align: center;
-font-family: 'Fjalla One', sans-serif;
-}
-
-li:nth-child(1) {
-  display: flex;
-  flex: 3;
+a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
 }
 
 nav ul li a,
@@ -52,29 +56,49 @@ nav ul li a:hover {
 nav ul li a {
   position:relative;
   z-index: 1;
+  &:hover {
+    color: black;
+  }
+  &::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background: #F1C40F;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+  }
+  &:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+  }
 }
-nav ul li a:hover {
-  color: black;
-}
-nav ul li a:after {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: 0;
-  width: 100%;
-  height: 1px;
-  content: '.';
-  color: transparent;
-  background: #F1C40F;
-  visibility: none;
-  opacity: 0;
-  z-index: -1;
-}
-nav ul li a:hover:after {
-  opacity: 1;
-  visibility: visible;
-  height: 100%;
+.title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .alaska {
+    margin-top: 6%;
+    @media #{$brk-wide} {
+      margin-top: 170px;
+      height: 150px;
+    }
+  }
+  h1, h2 {
+    color: white;
+    text-align: center;
+    @media #{$brk-wide} {
+      font-size: 2.9em;
+    }
+  }
+
 }

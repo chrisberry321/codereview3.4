@@ -8,6 +8,7 @@
   @media #{$brk-narrow} {
     flex-direction: column;
     display: flex;
+    margin: 12px;
   }
   @media #{$brk-medium} {
     display: flex;
@@ -16,8 +17,7 @@
   }
 }
 
-
-.trip1 {
+.trip1, {
   background-image: url(../img/pic1.jpg);
   @extend %trip-container;
   flex: 2;
