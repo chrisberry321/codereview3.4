@@ -60,6 +60,7 @@ body {
       left: 34%;
       }
       @media #{$brk-ex-wide} {
+        position: static;
 
         }
     }
@@ -67,11 +68,11 @@ body {
 .destination {
   .destination-bg {
     display: none;
-    @media #{$brk-ex-wide} {
+    @media #{$brk-wide}, #{$brk-ex-wide} {
       display: inline;
-      position: relative;
-      top: 380px;
-      left: 100px;
+      position: absolute;
+      top: 3184px;
+      left: 0;
     }
   }
 }
@@ -80,8 +81,8 @@ body {
   display: none;
   @media #{$brk-ex-wide} {
     display: inline;
-    position: relative;
-    top: 214px;
+    position: absolute;
+    top:3430px;
     left: 81%;
 
   }
@@ -92,7 +93,7 @@ body {
     @media #{$brk-ex-wide} {
       display: inline;
       position: absolute;
-      top: 3320px;
+      top: 3324px;
       right: 74%;
     }
   }

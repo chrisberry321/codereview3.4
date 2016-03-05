@@ -120,23 +120,26 @@ body {
         display: inline;
         position: absolute;
         left: 34%; } }
+    @media (min-width: 1441px) {
+      .destination .map {
+        position: static; } }
 
 .destination .destination-bg {
   display: none; }
-  @media (min-width: 1441px) {
+  @media (min-width: 1081px) and (max-width: 1440px), (min-width: 1441px) {
     .destination .destination-bg {
       display: inline;
-      position: relative;
-      top: 380px;
-      left: 100px; } }
+      position: absolute;
+      top: 3184px;
+      left: 0; } }
 
 .destination-bg-right {
   display: none; }
   @media (min-width: 1441px) {
     .destination-bg-right {
       display: inline;
-      position: relative;
-      top: 214px;
+      position: absolute;
+      top: 3430px;
       left: 81%; } }
 
 .destination .destination-bg-left {
@@ -145,7 +148,7 @@ body {
     .destination .destination-bg-left {
       display: inline;
       position: absolute;
-      top: 3320px;
+      top: 3324px;
       right: 74%; } }
 
 footer {
@@ -287,6 +290,15 @@ nav ul li a {
         width: 30px;
         background-color: #444; } }
 
+@keyframes close-image {
+  0% {
+    transform: scale(0.6); }
+  60% {
+    transform: scale(1.2); }
+  100% {
+    transform: scale(1); } }
+.kongakut img {
+  display: none; }
 @media (min-width: 1441px) {
   .kongakut {
     height: 30px;
@@ -296,14 +308,21 @@ nav ul li a {
     border: 20px solid #666;
     opacity: 0.8;
     position: relative;
-    left: 65%;
-    top: 100px;
+    left: 53%;
+    top: -550px;
     display: flex;
     align-items: center;
     justify-content: center; }
     .kongakut:hover {
       transform: scale(1.4);
-      transition: all 1s ease-in-out; }
+      transition: all 2s ease-in; }
+    .kongakut:active img {
+      display: inline;
+      border-radius: 100%;
+      width: 300px;
+      height: 300px;
+      -webkit-animation: close-image 4s ease-out reverse;
+      -webkit-animation-fill-mode: both; }
     .kongakut a {
       color: #DC7725; } }
 
