@@ -1,11 +1,15 @@
 header {
   button {
-    position: absolute;
-    top: 70%;
-    left: 46%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 110px;
+    // left: 44%;
     background-color: #DC7725;
     width: 160px;
     height: 40px;
+    z-index: 3;
 
     @media #{$brk-medium} {
       display: none;
@@ -28,6 +32,7 @@ header {
     background-color: #DC7725;
     width: 160px;
     height: 40px;
+    align-self: center;
 
 
     @media #{$brk-narrow} {

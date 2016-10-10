@@ -7,6 +7,9 @@ body {
   text-align: center;
   height: 630px;
   background-color: #E6E6E0;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 
 
   @media #{$brk-medium} {
@@ -17,9 +20,11 @@ body {
     padding-top: 8vh;
     color: #85857B;
     max-width: 800px;
+    align-self: center;
   }
   h1 {
     max-width: 800px;
+    align-self: center;
   }
   .head {
     width: 30vw;
@@ -33,6 +38,7 @@ body {
     color: #DC7725;
   }
   p{
+    align-self: center;
     font-size: 22px;
     color: #85857B;
     margin: 20px;
@@ -98,12 +104,3 @@ body {
     }
   }
 }
-
-
-
-
-
-
-
-
-p{}

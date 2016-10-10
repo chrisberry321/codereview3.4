@@ -13,7 +13,7 @@
 
 .kongakut {
   img {
-    display: none;
+  height: 0;
   }
   @media #{$brk-ex-wide} {
     height: 30px;

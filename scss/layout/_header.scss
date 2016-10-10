@@ -1,4 +1,6 @@
 header {
+  display: flex;
+  flex-direction: column;
   background-image: url(../img/main.jpg);
   max-width: 100%;
   height: 90vh;
@@ -14,13 +16,13 @@ header {
 }
 
 nav {
-  width: 80%;
-  margin:auto;
+  width: 100%;
+
   ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0 auto;
-    padding: 60px 0 0;
+    padding: 20px 0 0;
     li {
     flex: 1;
     padding: 5px 0;
@@ -34,6 +36,7 @@ nav {
     li:nth-child(1) {
       display: flex;
       flex: 3;
+      margin-left: 10px;
     }
   }
 }
@@ -71,7 +74,7 @@ nav ul li a {
     height: 1px;
     content: '.';
     color: transparent;
-    background: #F1C40F;
+    background: #DC7725;
     visibility: none;
     opacity: 0;
     z-index: -1;
@@ -82,26 +85,68 @@ nav ul li a {
     height: 100%;
   }
 }
+
 .title{
   display: flex;
   flex-direction: column;
   align-items: center;
   .alaska {
-    margin-top: 25px;
+    margin-top: 20px;
+    padding: 0;
+    transform:scale(2, 2);
     @media #{$brk-medium} {
-      margin-top: 100px;
+      margin: 0;
+      padding: 0;
+      transform: translate(270px, 78px);
+      border-bottom: 1.5px solid white;
       }
     @media #{$brk-wide} {
-      margin-top: 300px;
+      margin-top: 210px;
     }
     @media #{$brk-ex-wide} {
-      margin-top: 280px;
+      margin-top: 200px;
       height: 150px;
       width: auto;
     }
   }
-  h1, h2 {
+  h1{
+    position: relative;
+    top: -44vh;
     color: white;
     text-align: center;
+    font-size: 4em;
+    opacity: 0;
+      @media #{$brk-medium} {
+        opacity: 1;
+        font-size: 3.5em;
+        position: relative;
+        top: -20vh;
+      }
+      @media #{$brk-wide} {
+        opacity: 1;
+        position: relative;
+        top: -44vh;
+        color: white;
+        text-align: center;
+        font-size: 4em;
+      }
+  }
+  h2 {
+    position: relative;
+    top: -20vh;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    @media #{$brk-medium} {
+      opacity: 1;
+      top: 4vh;
+    }
+    @media #{$brk-wide} {
+      opacity: 1;
+      position: relative;
+      top: -20vh;
+      color: white;
+      text-align: center;
+    }
   }
 }
